@@ -7,12 +7,33 @@
 //
 
 import UIKit
-
+import Alamofire
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        Alamofire.request("http://httpbin.org/get").responseJSON { (response) in
+//            print(response.request as Any)
+//            print(response.data as Any)
+//            print(response.response as Any)
+//            print(response.result as Any)
+            
+            if let JSON = response.result.value
+            {
+                if let dictionary = JSON as? [String:Any]
+                {
+                    if let value = dictionary["origin"] as? String
+                    {
+                    print("解出key為origin的值")
+                        print(value)
+                    }
+                
+                }
+            }
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
