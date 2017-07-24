@@ -31,12 +31,14 @@ class ViewController: UIViewController {
                 
                     if let headers_dictionary = dictionary["headers"] as? [String:Any]
                     {
-                        if let value = headers_dictionary["Accept"] as? String
+                        for (key,value) in headers_dictionary
                         {
-                    print("解出key為Accept的值")
-                        print(value)
+                        if let value_string = value as? String
+                        {
+                            print(key + ":" + value_string)
+                            }
                         }
-                    }
+                                            }
                     
                     if let value = dictionary["url"] as? String
                     {
