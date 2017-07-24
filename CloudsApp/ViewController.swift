@@ -29,6 +29,21 @@ class ViewController: UIViewController {
                         print(value)
                     }
                 
+                    if let headers_dictionary = dictionary["headers"] as? [String:Any]
+                    {
+                        if let value = headers_dictionary["Accept"] as? String
+                        {
+                    print("解出key為Accept的值")
+                        print(value)
+                        }
+                    }
+                    
+                    if let value = dictionary["url"] as? String
+                    {
+                    print("解出 key 為 args 的值")
+                        print(value)
+                    
+                    }
                 }
             }
             
