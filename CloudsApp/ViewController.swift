@@ -14,47 +14,40 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         Alamofire.request("https://api.github.com/users/octocat/repos").responseJSON { (response) in
-            guard let result_value = response.result.value
-                  //if let result_value = response.result.value
-                else
-            {
+            guard let result_value = response.result.value,
+                let array = result_value as? [Any]
+        else{
                 return
             }
-                if let array = result_value as? [Any]//將 result_value 解讀為 任何型態 的陣列
-                {
-                    //                    if let JSON_OBJECT = array.first{ //將陣列第一個 JSON物件作解析
-                    for JSON_OBJECT in array{
-                        if let dictionary = JSON_OBJECT as?[String:Any]
-                        {//將 JSON 物件轉成key-value 陣列
-                            if let value = dictionary["id"]as? Int
-                            {
-                                print("id:\(value)")
-                            }
-                            
-                            if let value = dictionary["name"]as? String
-                            {
-                                print("name:\(value)")
-                            }
-                            if let value = dictionary["private"]as? Bool
-                            {
-                                print("private:\(value)")
-                            }
-                            if let value = dictionary["homepage"]as? String
-                            {
-                                print("homepage:\(value)")
-                            }
-                            else
-                            {
-                                print("homepage: null")
-                            }
-                            
+            for JSON_OBJECT in array{
+                      guard let dictionary = JSON_OBJECT as?[String:Any]
+                        else
+                      {//將 JSON 物件轉成key-value 陣列
+                    return
                         }
+                if let value = dictionary["id"]as? Int
+                {
+                    print("id:\(value)")
+                }
+                
+                if let value = dictionary["name"]as? String
+                {
+                    print("name:\(value)")
+                }
+                if let value = dictionary["private"]as? Bool
+                {
+                    print("private:\(value)")
+                }
+                if let value = dictionary["homepage"]as? String
+                {
+                    print("homepage:\(value)")
+                }
                     }
                     // }
                 //}
-                
-                
-            }
+            
+       // }
+           // }
             
         }
 
