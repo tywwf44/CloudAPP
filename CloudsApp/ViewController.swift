@@ -25,23 +25,40 @@ class ViewController: UIViewController {
                       {//將 JSON 物件轉成key-value 陣列
                     return
                         }
-                if let value = dictionary["id"]as? Int
+                for(key,value) in dictionary
                 {
-                    print("id:\(value)")
-                }
-                
-                if let value = dictionary["name"]as? String
+                switch value
                 {
-                    print("name:\(value)")
+                case is Int:
+                    print("\(key):\(value)(Int)")
+                case is String:
+                    print("\(key):\(value)(String)")
+                case is Bool:
+                    print("\(key):\(value)(Bool)")
+                case is [Array<Any>]:
+                    print("\(key):\(value)(Array)")
+                default:
+                    print("\(key):(unkown type)")
+                    }
                 }
-                if let value = dictionary["private"]as? Bool
-                {
-                    print("private:\(value)")
-                }
-                if let value = dictionary["homepage"]as? String
-                {
-                    print("homepage:\(value)")
-                }
+//                guard let value = dictionary["id"]as? Int
+//                  else{
+//                            return
+//                      }
+//                print("id:\(value)")
+//
+//                if let value = dictionary["name"]as? String
+//                {
+//                    print("name:\(value)")
+//                }
+//                if let value = dictionary["private"]as? Bool
+//                {
+//                    print("private:\(value)")
+//                }
+//                if let value = dictionary["homepage"]as? String
+//                {
+//                    print("homepage:\(value)")
+//                }
                     }
                     // }
                 //}
