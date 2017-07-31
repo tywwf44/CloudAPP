@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A04E43F1F2ED7EC00078E67 /* httpbin.org.josn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A04E43E1F2ED7EC00078E67 /* httpbin.org.josn.swift */; };
 		9A50C27F1F25E00B00AAC7D0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEDC0401F25A61200A9054E /* Alamofire.framework */; };
 		9A50C2801F25E00B00AAC7D0 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEDC0401F25A61200A9054E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9AEDC0231F259AE800A9054E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEDC0221F259AE800A9054E /* AppDelegate.swift */; };
@@ -90,6 +91,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A04E43E1F2ED7EC00078E67 /* httpbin.org.josn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = httpbin.org.josn.swift; sourceTree = "<group>"; };
 		9AEDC01F1F259AE800A9054E /* CloudsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEDC0221F259AE800A9054E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AEDC0241F259AE800A9054E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				9AEDC0221F259AE800A9054E /* AppDelegate.swift */,
 				9AEDC0241F259AE800A9054E /* ViewController.swift */,
+				9A04E43E1F2ED7EC00078E67 /* httpbin.org.josn.swift */,
 				9AEDC0261F259AE800A9054E /* Main.storyboard */,
 				9AEDC0291F259AE800A9054E /* Assets.xcassets */,
 				9AEDC02B1F259AE800A9054E /* LaunchScreen.storyboard */,
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AEDC0251F259AE800A9054E /* ViewController.swift in Sources */,
+				9A04E43F1F2ED7EC00078E67 /* httpbin.org.josn.swift in Sources */,
 				9AEDC0231F259AE800A9054E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

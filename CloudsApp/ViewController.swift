@@ -13,100 +13,101 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request("https://api.github.com/users/octocat/repos").responseJSON { (response) in
-            guard let result_value = response.result.value,
-                let array = result_value as? [Any]
-        else{
-                return
-            }
-            for JSON_OBJECT in array{
-                      guard let dictionary = JSON_OBJECT as?[String:Any]
-                        else
-                      {//將 JSON 物件轉成key-value 陣列
-                    return
-                        }
-                for(key,value) in dictionary
-                {
-                switch value
-                {
-                case is Int:
-                    print("\(key):\(value)(Int)")
-                case is String:
-                    print("\(key):\(value)(String)")
-                case is Bool:
-                    print("\(key):\(value)(Bool)")
-                case is [Array<Any>]:
-                    print("\(key):\(value)(Array)")
-                default:
-                    print("\(key):(unkown type)")
-                    }
-                }
-//                guard let value = dictionary["id"]as? Int
-//                  else{
-//                            return
-//                      }
-//                print("id:\(value)")
-//
-//                if let value = dictionary["name"]as? String
+//        Alamofire.request("https://api.github.com/users/octocat/repos").responseJSON { (response) in
+//            guard let result_value = response.result.value,
+//                let array = result_value as? [Any]
+//        else{
+//            
+//                return
+//            }
+//            for JSON_OBJECT in array{
+//                      guard let dictionary = JSON_OBJECT as?[String:Any]
+//                        else
+//                      {//將 JSON 物件轉成key-value 陣列
+//                    return
+//                        }
+//                for(key,value) in dictionary
 //                {
-//                    print("name:\(value)")
-//                }
-//                if let value = dictionary["private"]as? Bool
+//                switch value
 //                {
-//                    print("private:\(value)")
+//                case is Int:
+//                    print("\(key):\(value)(Int)")
+//                case is String:
+//                    print("\(key):\(value)(String)")
+//                case is Bool:
+//                    print("\(key):\(value)(Bool)")
+//                case is [Array<Any>]:
+//                    print("\(key):\(value)(Array)")
+//                default:
+//                    print("\(key):(unkown type)")
+//                    }
 //                }
-//                if let value = dictionary["homepage"]as? String
-//                {
-//                    print("homepage:\(value)")
-//                }
-                    }
-                    // }
-                //}
-            
-       // }
-           // }
-            
-        }
+////                guard let value = dictionary["id"]as? Int
+////                  else{
+////                            return
+////                      }
+////                print("id:\(value)")
+////
+////                if let value = dictionary["name"]as? String
+////                {
+////                    print("name:\(value)")
+////                }
+////                if let value = dictionary["private"]as? Bool
+////                {
+////                    print("private:\(value)")
+////                }
+////                if let value = dictionary["homepage"]as? String
+////                {
+////                    print("homepage:\(value)")
+////                }
+//                    }
+//                    // }
+//                //}
+//            
+//       // }
+//           // }
+//            
+//        }
 
         
-//        Alamofire.request("http://httpbin.org/get").responseJSON { (response) in
+        Alamofire.request("http://httpbin.org/get").responseJSON { (response) in
 //            print(response.request as Any)
 //            print(response.data as Any)
 //            print(response.response as Any)
 //            print(response.result as Any)
             
-//            if let JSON = response.result.value
-//            {
-//                if let dictionary = JSON as? [String:Any]
-//                {
-//                    if let value = dictionary["origin"] as? String
-//                    {
-//                        print("解出key為origin的值")
-//                        print(value)
-//                    }
-//                    
-//                    if let headers_dictionary = dictionary["headers"] as? [String:Any]
-//                    {
-//                        for (key,value) in headers_dictionary
-//                        {
-//                            if let value_string = value as? String
-//                            {
-//                                print(key + ":" + value_string)
-//                            }
-//                        }
-//                    }
-//                    
-//                    if let value = dictionary["url"] as? String
-//                    {
-//                        print("解出 key 為 args 的值")
-//                        print(value)
-//                        
-//                    }
-//                }
-//            }
-//            
-//        }
+            guard let JSON_OBJECT = response.result.value,
+            
+                let dictionary = JSON_OBJECT as? [String:Any]
+            else
+            {
+                return
+            }
+                guard let origin = dictionary["origin"] as? String
+                    else
+                    {
+                        return
+                       }
+                       print("origin\(origin)")
+            
+            guard let url = dictionary["url"] as? String
+                else
+            {
+                return
+            }
+            print("url\(url)")
         
+            //在初始化物件時，輸入變數用的資料
+            let httpbinOrgJson = HttpbinOrgJson(origin: origin , url: url)
+            print(httpbinOrgJson)
+            
+            let httpbinOrgJson2 = HttpbinOrgJson()
+            print(httpbinOrgJson2)
+            
+            
+            let httpbinOrgJson3 = try? HttpbinOrgJson(dictionary: dictionary)
+            print(httpbinOrgJson3 as Any)
+    }
     }
 
     override func didReceiveMemoryWarning() {
