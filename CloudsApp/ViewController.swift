@@ -8,21 +8,22 @@
 
 import UIKit
 import Alamofire
+import Gloss
 class ViewController: UIViewController {
 
-    var apiGithubComJsons:[ApiGithubComJson] = []
+    var apiGithubComJsonsGloss:[ApiGithubComJsonGloss] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         //希望重構城市盜用以下一行即可處理 JSON的取得
-        ApiGithubComJson.fetch(){ dataTransfer in
+        ApiGithubComJsonGloss.fetch(){ dataTransfer in
             
-            self.apiGithubComJsons = dataTransfer
+            self.apiGithubComJsonsGloss = dataTransfer
             
             print("fetch()完成後")
-            print(self.apiGithubComJsons)
+            print(self.apiGithubComJsonsGloss)
         }
       
 //        Alamofire.request("https://api.github.com/users/octocat/repos").responseJSON { (response) in

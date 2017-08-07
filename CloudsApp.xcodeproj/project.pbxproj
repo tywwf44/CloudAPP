@@ -11,6 +11,9 @@
 		9A04E4481F2F06BA00078E67 /* api_github.com.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A04E4471F2F06BA00078E67 /* api_github.com.swift */; };
 		9A87F71F1F37F4BC00FBE6D2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEDC0401F25A61200A9054E /* Alamofire.framework */; };
 		9A87F7201F37F4BC00FBE6D2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEDC0401F25A61200A9054E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A87F74C1F380E1600FBE6D2 /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A87F7421F380B5B00FBE6D2 /* Gloss.framework */; };
+		9A87F74D1F380FBE00FBE6D2 /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A87F7421F380B5B00FBE6D2 /* Gloss.framework */; };
+		9A87F74E1F380FBE00FBE6D2 /* Gloss.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A87F7421F380B5B00FBE6D2 /* Gloss.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9AEDC0231F259AE800A9054E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEDC0221F259AE800A9054E /* AppDelegate.swift */; };
 		9AEDC0251F259AE800A9054E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEDC0241F259AE800A9054E /* ViewController.swift */; };
 		9AEDC0281F259AE800A9054E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AEDC0261F259AE800A9054E /* Main.storyboard */; };
@@ -25,6 +28,48 @@
 			proxyType = 1;
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
+		};
+		9A87F7411F380B5B00FBE6D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A87F7321F380B5B00FBE6D2 /* Gloss.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC39BF611B8A7AD200088CE0;
+			remoteInfo = Gloss;
+		};
+		9A87F7431F380B5B00FBE6D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A87F7321F380B5B00FBE6D2 /* Gloss.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DCF3008A1BDCA3FF003FBF15;
+			remoteInfo = "Gloss MacOS";
+		};
+		9A87F7451F380B5B00FBE6D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A87F7321F380B5B00FBE6D2 /* Gloss.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A04168E71C0DF69900269A6A;
+			remoteInfo = "Gloss tvOS";
+		};
+		9A87F7471F380B5B00FBE6D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A87F7321F380B5B00FBE6D2 /* Gloss.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC683ADB1C2C615D0035EAC3;
+			remoteInfo = "Gloss watchOS";
+		};
+		9A87F7491F380B5B00FBE6D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A87F7321F380B5B00FBE6D2 /* Gloss.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2FA4CE9A1C947E3000EB8AB8;
+			remoteInfo = GlossTests;
+		};
+		9A87F74F1F380FBE00FBE6D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A87F7321F380B5B00FBE6D2 /* Gloss.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DC39BF601B8A7AD200088CE0;
+			remoteInfo = Gloss;
 		};
 		9AEDC03F1F25A61200A9054E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -85,6 +130,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9A87F7201F37F4BC00FBE6D2 /* Alamofire.framework in Embed Frameworks */,
+				9A87F74E1F380FBE00FBE6D2 /* Gloss.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +140,7 @@
 /* Begin PBXFileReference section */
 		9A04E43E1F2ED7EC00078E67 /* httpbin.org.josn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = httpbin.org.josn.swift; sourceTree = "<group>"; };
 		9A04E4471F2F06BA00078E67 /* api_github.com.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = api_github.com.swift; sourceTree = "<group>"; };
+		9A87F7321F380B5B00FBE6D2 /* Gloss.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Gloss.xcodeproj; path = Gloss/Gloss.xcodeproj; sourceTree = "<group>"; };
 		9AEDC01F1F259AE800A9054E /* CloudsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEDC0221F259AE800A9054E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AEDC0241F259AE800A9054E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,16 +156,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A87F74C1F380E1600FBE6D2 /* Gloss.framework in Frameworks */,
 				9A87F71F1F37F4BC00FBE6D2 /* Alamofire.framework in Frameworks */,
+				9A87F74D1F380FBE00FBE6D2 /* Gloss.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A87F7331F380B5B00FBE6D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A87F7421F380B5B00FBE6D2 /* Gloss.framework */,
+				9A87F7441F380B5B00FBE6D2 /* Gloss.framework */,
+				9A87F7461F380B5B00FBE6D2 /* Gloss.framework */,
+				9A87F7481F380B5B00FBE6D2 /* Gloss.framework */,
+				9A87F74A1F380B5B00FBE6D2 /* GlossTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9AEDC0161F259AE800A9054E = {
 			isa = PBXGroup;
 			children = (
+				9A87F7321F380B5B00FBE6D2 /* Gloss.xcodeproj */,
 				9AEDC0341F25A61200A9054E /* Alamofire.xcodeproj */,
 				9AEDC0211F259AE800A9054E /* CloudsApp */,
 				9AEDC0201F259AE800A9054E /* Products */,
@@ -178,6 +240,7 @@
 			);
 			dependencies = (
 				9A87F7221F37F4BC00FBE6D2 /* PBXTargetDependency */,
+				9A87F7501F380FBE00FBE6D2 /* PBXTargetDependency */,
 			);
 			name = CloudsApp;
 			productName = CloudsApp;
@@ -217,6 +280,10 @@
 					ProductGroup = 9AEDC0351F25A61200A9054E /* Products */;
 					ProjectRef = 9AEDC0341F25A61200A9054E /* Alamofire.xcodeproj */;
 				},
+				{
+					ProductGroup = 9A87F7331F380B5B00FBE6D2 /* Products */;
+					ProjectRef = 9A87F7321F380B5B00FBE6D2 /* Gloss.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -226,6 +293,41 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		9A87F7421F380B5B00FBE6D2 /* Gloss.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Gloss.framework;
+			remoteRef = 9A87F7411F380B5B00FBE6D2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A87F7441F380B5B00FBE6D2 /* Gloss.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Gloss.framework;
+			remoteRef = 9A87F7431F380B5B00FBE6D2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A87F7461F380B5B00FBE6D2 /* Gloss.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Gloss.framework;
+			remoteRef = 9A87F7451F380B5B00FBE6D2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A87F7481F380B5B00FBE6D2 /* Gloss.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Gloss.framework;
+			remoteRef = 9A87F7471F380B5B00FBE6D2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A87F74A1F380B5B00FBE6D2 /* GlossTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GlossTests.xctest;
+			remoteRef = 9A87F7491F380B5B00FBE6D2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9AEDC0401F25A61200A9054E /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -309,6 +411,11 @@
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
 			targetProxy = 9A87F7211F37F4BC00FBE6D2 /* PBXContainerItemProxy */;
+		};
+		9A87F7501F380FBE00FBE6D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Gloss;
+			targetProxy = 9A87F74F1F380FBE00FBE6D2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
