@@ -8,6 +8,14 @@
 
 import Foundation
 
+enum DeCodeJsonError:Error
+{
+case missing(String)
+case invalid(String,Any)
+
+}
+
+
 struct HttpbinOrgJson {
     
     let origin : String
@@ -29,16 +37,39 @@ extension HttpbinOrgJson {
         self.url = "內部設定初始值"
     }
 
-    init(dictionary:[String:Any])throws
+//    init(dictionary:[String:Any])throws
+//    {
+//    guard let origin = dictionary["origin"] as? String
+//        else
+//    {
+//        throw DeCodeJsonError.missing("origin")
+//        }
+//       guard  let url = dictionary["url"] as? String
+//        else
+//        {
+//            throw DeCodeJsonError.missing("url")
+//        }
+//        
+//        self.origin = origin
+//        self.url = url
+//    }
+    
+    
+    init?(dictionary:[String:Any])
     {
-    guard let origin = dictionary["origin"] as? String,
-        let url = dictionary["url"] as? String
-        else
-    {
-          //return
-        throw 0 as! Error
+        guard let origin = dictionary["origin"] as? String
+            else
+        {
+            return nil
         }
+        guard  let url = dictionary["url"] as? String
+            else
+        {
+            return nil
+        }
+        
         self.origin = origin
         self.url = url
     }
+
 }
